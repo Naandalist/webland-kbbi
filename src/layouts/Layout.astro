@@ -1,0 +1,68 @@
+---
+import Footer from "@components/sections/Footer";
+import PageAnimation from "@components/ui/PageAnimation";
+export interface Props {
+	title: string;
+	description?: string;
+	showFooter?: boolean;
+}
+
+const { title, description } = Astro.props;
+const { showFooter = true } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.webp" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="kamus bahasa indonesia, KBBI, kamus digital, kamus online, arti kata, definisi kata, bahasa indonesia, kosakata indonesia, pencarian kata, aplikasi kamus" />
+    <meta name="author" content="Listiananda Apriliawan" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Indonesian" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content="https://play-lh.googleusercontent.com/lj49LfN51CWDYCidwOGJyL3ApeJBbHspJdzzpgdTEnnjE0Ha1ONqjb1HX4dghWXZsFM=w832-h470-rw" />
+    <meta property="og:image:width" content="832" />
+    <meta property="og:image:height" content="470" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:site_name" content="Kamus KBBI VI Bahasa Indonesia" />
+    <meta property="og:locale" content="id_ID" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:image" content="https://play-lh.googleusercontent.com/lj49LfN51CWDYCidwOGJyL3ApeJBbHspJdzzpgdTEnnjE0Ha1ONqjb1HX4dghWXZsFM=w832-h470-rw" />
+    
+    {description && <meta name="description" content={description} />}
+    {description && <meta property="og:description" content={description} />}
+    {description && <meta name="twitter:description" content={description} />}
+    
+    <meta name="theme-color" content="#ffffff" />
+    <title>{title}</title>
+    <script>
+      history.scrollRestoration = "manual";
+      window.addEventListener("load", () => {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </head>
+  <body class="bg-white font-sans text-black">
+    <div class="mx-auto min-h-screen max-w-[800px]">
+      <PageAnimation client:load>
+        <main>
+          <slot />
+        </main>
+        {showFooter && <Footer />}
+      </PageAnimation>
+    </div>
+  </body>
+</html>
