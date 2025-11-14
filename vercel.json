@@ -1,16 +1,14 @@
 {
-	"headers": [
+	"routes": [
 		{
-			"source": "/(.*)",
+			"src": "/(.*)",
 			"headers": [
 				{
 					"key": "X-Robots-Tag",
 					"value": "noindex, nofollow"
 				}
 			]
-		}
-	],
-	"routes": [
+		},
 		{
 			"src": "/404",
 			"status": 404,
