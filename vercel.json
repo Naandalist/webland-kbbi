@@ -1,26 +1,23 @@
 {
-	"routes": [
+	"headers": [
 		{
-			"src": "/(.*)",
+			"source": "/(.*)",
 			"headers": [
 				{
 					"key": "X-Robots-Tag",
 					"value": "noindex, nofollow"
 				}
 			]
+		}
+	],
+	"rewrites": [
+		{
+			"source": "/privacy",
+			"destination": "/privacy.astro"
 		},
 		{
-			"src": "/404",
-			"status": 404,
-			"dest": "/404.astro"
-		},
-		{
-			"src": "/privacy",
-			"dest": "/privacy.astro"
-		},
-		{
-			"src": "/terms",
-			"dest": "/terms.astro"
+			"source": "/terms",
+			"destination": "/terms.astro"
 		}
 	]
 }
