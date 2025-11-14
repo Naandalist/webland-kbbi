@@ -20,8 +20,11 @@ const { showFooter = true } = Astro.props;
     
     <!-- SEO Meta Tags -->
     <meta name="keywords" content="kamus bahasa indonesia, KBBI, kamus digital, kamus online, arti kata, definisi kata, bahasa indonesia, kosakata indonesia, pencarian kata, aplikasi kamus" />
-    <meta name="author" content="Listiananda Apriliawan" />
-    <meta name="robots" content="index, follow" />
+  <meta name="author" content="Listiananda Apriliawan" />
+  <!-- Prevent indexing by search engines -->
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Explicit directive for Google crawler -->
+  <meta name="googlebot" content="noindex, nofollow" />
     <meta name="language" content="Indonesian" />
     <meta name="revisit-after" content="7 days" />
     <meta name="rating" content="general" />
