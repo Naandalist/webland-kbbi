@@ -4,7 +4,7 @@ import type { Feature } from "./types";
 export const features: Feature[] = [
     {
         title: "Lengkap",
-        description: "Akses database kosakata lengkap yang mencerminkan KBBI resmi dari Kemendikbud.",
+        description: "Akses database kosakata lengkap cerminan KBBI dari Kemendikbud.",
         icon: FiBook,
     },
     {

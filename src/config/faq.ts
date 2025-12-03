@@ -3,7 +3,7 @@ import type { FAQ } from "./types";
 export const faq: FAQ[] = [
 	{
 		question: "Apa itu aplikasi KBBI VI Bahasa Indonesia?",
-		answer: "Aplikasi KBBI adalah kamus digital bahasa Indonesia yang memuat seluruh kosakata resmi sesuai dengan standar Badan Pengembangan dan Pembinaan Bahasa, Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. Aplikasi ini dirancang untuk mempermudah pengguna dalam mencari dan memahami makna kata-kata secara cepat dan akurat."
+		answer: "Aplikasi KBBI adalah kamus digital bahasa Indonesia yang memuat seluruh kosakata yang disesuaikan dengan standar Badan Pengembangan dan Pembinaan Bahasa, Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. Aplikasi ini dirancang untuk mempermudah pengguna dalam mencari dan memahami makna kata-kata secara cepat dan akurat."
 	},
 	{
 		question: " Apakah aplikasi ini merupakan produk resmi dari Kemendikbud?",
